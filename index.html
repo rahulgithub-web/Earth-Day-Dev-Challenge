@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earth Day Celebration</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"/>
+    <link rel="icon" type="image/png" href="https://purepng.com/public/uploads/large/purepng.com-earthearthplanetglobethird-planet-from-the-sun-1411526987612f5l5p.png"/>
+</head>
+<style>
+/* Basic Reset and Typography */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: #eef5ee;
+}
+
+header, section, article, div, footer {
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+h1, h2, p, a {
+    margin: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Header */
+header {
+    background-color: #007B3F;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    animation: fadeInDown 1s ease-out forwards;
+}
+
+/* Keyframes for animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply the animations to emojis */
+.facts:before, .testimonial:before, .action-call:before {
+    content: '🌍';
+    font-size: 2rem;
+    animation: spinAndZoom 6s linear infinite;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.article:before {
+    content: '🌳';
+    font-size: 2rem;
+    animation: spinAndZoom 6s linear infinite;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.testimonial:before {
+    content: '💧';
+    font-size: 2rem;
+    animation: spinAndZoom 6s linear infinite;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+@keyframes spinAndZoom {
+    0%, 100% {
+        transform: scale(1) rotate(0deg);
+    }
+    50% {
+        transform: scale(1.2) rotate(180deg);
+    }
+}
+
+/* Section and Article Styling */
+section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+article {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin: 10px;
+    flex: 1 1 300px;
+    padding: 20px;
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Action Call */
+.action-call {
+    background: #f9de59;
+    text-align: center;
+    animation: fadeIn 1.5s ease-out forwards;
+}
+
+.action-call a {
+    display: inline-block;
+    margin-top: 20px;
+    background: #007B3F;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.action-call a:hover {
+    background-color: #005A28;
+}
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+/* Styling for SVGs */
+.leaf-svg, .earth-svg {
+    fill: currentColor;
+    transition: transform 0.3s ease-in-out;
+}
+
+.leaf-svg:hover, .earth-svg:hover {
+    transform: scale(1.1);
+}
+
+/* Leaf Animation */
+.leaf-svg {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Earth Animation */
+.earth-svg {
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Hover effects for interactivity */
+article:hover, .testimonial:hover, .events:hover, .action-call:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px 20px;
+    background-color: #D7ECD9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    section {
+        flex-direction: column;
+    }
+}
+
+</style>
+<body>
+    <svg class="leaf-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="50" height="50">
+        <path fill="#5C9E31" d="M2,32C2,15.4,15.4,2,32,2s30,13.4,30,30-13.4,30-30,30S2,48.6,2,32"/>
+        <path fill="#FFF" d="M20,32c0,0,20-22,40,0C60,32,40,54,20,32z"/>
+        <path fill="#70B237" d="M32,2c16.6,0,30,13.4,30,30c0,10.9-10,30-30,30C22,62,12,42.9,12,32C12,15.4,25.4,2,32,2 M32,0 C14.3,0,0,14.3,0,32c0,11.5,11.1,32,32,32s32-20.5,32-32C64,14.3,49.7,0,32,0L32,0z"/>
+    </svg>
+    <svg class="earth-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="100" height="100">
+        <circle fill="#6DA544" cx="32" cy="32" r="30"/>
+        <g fill="#FFF">
+            <path d="M46.9,14c-1.1-1.1-3.4-2.5-5-1c-1.9,1.8-1,7.8-5,7c-2.9-0.6-3.8-4-6-5c-3.1-1.4-6.2,0.6-9,2 c-3.6,1.8-5.8,4.3-8,8c-0.5,0.8-1,1.5-1,2c0,0.3,0.1,0.5,0.1,0.8c0.7,1.5,4.7,1.8,5,5c0.2,2.2-1.7,3.8-1,6 c0.4,1.2,2.1,1.9,3,3c1,1.2,1,3.5,3,4c1.7,0.4,4.4-0.7,6-1c4-0.7,6.3-2.7,9-5c4.3-3.6,6-8.3,8-13c1.3-3.1,2.2-6.3,2-10 C52,18.9,49.6,16.7,46.9,14z"/>
+            <path d="M32,2c-1.2,0-2.3,0.1-3.4,0.2c1.8,0.5,3.4,1.5,4.8,2.8c1.1,1,2,2.2,2.7,3.6c0.5-0.1,1.1-0.2,1.6-0.2 c5.2,0,9.7,2.5,12.5,6.3c0.3-0.1,0.7-0.2,1-0.2c3.3,0,6.3,1.3,8.5,3.5c2.2,2.2,3.5,5.2,3.5,8.5c0,3-1.1,5.9-3,8 c-1.5,1.6-3.4,2.8-5.5,3.7c-0.4,2.7-1.5,5.2-3.2,7.4c-1.9,2.5-4.4,4.4-7.4,5.5c0.2,1.1,0.3,2.3,0.3,3.4c0,1.7-0.2,3.4-0.6,5 c2.2-0.6,4.2-1.7,5.9-3.3c2.1-2.1,3.4-4.9,3.4-7.9c0-1.5-0.3-3-0.9-4.4c1.3-1.4,2.3-3.1,2.8-5c1.6,1.1,3.5,1.7,5.6,1.7 c1.9,0,3.7-0.5,5.2-1.5c3.1-2,5.1-5.4,5.1-9.2c0-4-2.2-7.7-5.6-9.6c2-3.4,3.2-7.5,3.2-11.9C62,16.3,49.7,4,34,4 C33.3,3.1,32.7,2.5,32,2L32,2z"/>
+        </g>
+        <g fill="#578A34">
+            <path d="M17,24c0-0.5,0.4-0.9,1-1c1.9-0.4,3.1,0.9,4,2c0.6,0.7,1.1,1.5,1,2c0,0.5-0.5,1-1,1 c-1.1,0.1-2.1-0.7-3-1C18.3,26.4,17.7,25.2,17,24z"/>
+            <path d="M27,39c-0.5,0-0.9-0.4-1-1c-0.1-1.1,0.7-2.1,1-3c0.3-0.7,0.6-1.4,1-2c0.5-0.6,1.4-0.7,2-1 c0.5-0.2,1.1,0,1.5,0.5c0.5,0.5,0.6,1.3,0.5,2c-0.2,1.1-1,1.9-1.5,3c-0.3,0.7-0.6,1.4-1,2C28.9,38.6,28,39,27,39z"/>
+        </g>
+    </svg>
+    
+    <header>
+        <h1>Welcome to Our Earth Day Celebration!</h1>
+    </header>
+    <section>
+        <article class="facts">
+            <h2>Did You Know?</h2>
+            <p>Earth Day was first celebrated on April 22, 1970, and now includes a wide range of events coordinated globally by EARTHDAY.ORG including 1 billion people in more than 193 countries.</p>
+        </article>
+        <article>
+            <h2>Why Celebrate Earth Day?</h2>
+            <p>Earth Day is more than just a single day — April 22. It's a day to remind us to take action in our communities and beyond, to protect the environment, restore damaged ecosystems, and live a more sustainable life.</p>
+        </article>
+        <article>
+            <h2>How You Can Help</h2>
+            <p>Join us in making a difference! Here are some ways you can contribute to preserving our planet:</p>
+            <ul>
+                <li>Reduce, reuse, and recycle.</li>
+                <li>Volunteer for cleanups in your community.</li>
+                <li>Conserve water and electricity.</li>
+                <li>Plant a tree.</li>
+                <li>Educate others about environmental conservation.</li>
+            </ul>
+        </article>
+        <div class="action-call">
+            <h2>Take Action Now</h2>
+            <p>Join our Earth Day quiz to test your knowledge and learn more about what you can do to help our planet!</p>
+            <a href="#">Start the Quiz!</a>
+        </div>
+    </section>
+    <div class="testimonial">
+        <h2>Inspiration Corner</h2>
+        <p>"The Earth does not belong to us: we belong to the Earth." - Marlee Matlin</p>
+        <p>This Earth Day, let's remember we are part of a larger ecosystem and our actions have a profound impact on our planet.</p>
+    </div>
+    <div class="events">
+        <h2>Join an Event</h2>
+        <p>Participate in local and global Earth Day events to take action towards a sustainable future. Check out <a href="#">events near you</a>.</p>
+    </div>
+    <footer>
+        <p>Happy Earth Day! Together, we can make a difference.</p>
+    </footer>
+</body>
+</html>

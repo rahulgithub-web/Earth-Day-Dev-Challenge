@@ -2,7 +2,9 @@
 
 This project is dedicated to creating an interactive and visually appealing webpage to celebrate Earth Day. It aims to raise awareness of environmental issues through engaging content and interactive design using HTML, CSS, and SVG graphics.
 
+
 ![Earth Logo](earth_day.png "Earth Day Logo")
+
 
 ## Features
 
